@@ -126,7 +126,7 @@ public class BaseUnit : MonoBehaviour
             {
                 damage = config.MeleeDamage;
             }
-            else if (distanceToTarget <= config.VisionRange) // Ranged attack
+            else if (distanceToTarget <= config.TrueRange) // Ranged attack
             {
                 damage = config.RangedAttack;
             }
@@ -134,7 +134,7 @@ public class BaseUnit : MonoBehaviour
             // Apply the damage to the target
             if (damage > 0f)
             {
-                target.TakeDamage(damage, DamageType.Physical);
+                target.TakeDamage(damage, config.DamageType);
             }
         }
     }

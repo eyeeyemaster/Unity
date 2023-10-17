@@ -22,6 +22,7 @@ public class UnitConfig : ScriptableObject
     [SerializeField] private float manaRegen;
     [SerializeField] private float buffDuration;
     [SerializeField] private float debuffDuration;
+    [SerializeField] protected bool isMeleeUnit;
 
 
     // Resistances
