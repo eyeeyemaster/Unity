@@ -113,3 +113,28 @@ public class BaseUnit : MonoBehaviour
     }
 }
 
+    public void Attack(BaseUnit target)
+    {
+        // Check if the target is not null
+        if (target != null)
+        {
+            // Calculate the damage based on whether the unit is melee or ranged
+            float damage = 0f;
+            float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
+
+            if (distanceToTarget <= config.TrueRange) // Melee attack
+            {
+                damage = config.MeleeDamage;
+            }
+            else if (distanceToTarget <= config.VisionRange) // Ranged attack
+            {
+                damage = config.RangedAttack;
+            }
+
+            // Apply the damage to the target
+            if (damage > 0f)
+            {
+                target.TakeDamage(damage, DamageType.Physical);
+            }
+        }
+    }
