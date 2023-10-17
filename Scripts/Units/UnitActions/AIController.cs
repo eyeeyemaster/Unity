@@ -18,7 +18,8 @@ public class AIController : MonoBehaviour
             actions = new List<AIAction> {
                 new AttackAction(),
                 new ChaseAction(),
-                new SearchForTargetAction()
+                new SearchForTargetAction(),
+                new RetreatingAction() // Added RetreatingAction to the list of actions
             
                 // Add more actions as needed...
             }

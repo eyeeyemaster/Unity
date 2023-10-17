@@ -11,6 +11,7 @@ public class AIContext
     public LayerMask enemyLayers;
     public bool retreating; // Added retreating field
     public float range; // Added range field
+    public float recentDamage; // Added recentDamage field
 
     public AIContext(BaseUnit unit)
     {
