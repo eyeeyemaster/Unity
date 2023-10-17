@@ -23,6 +23,7 @@ public class UnitConfig : ScriptableObject
     [SerializeField] private float buffDuration;
     [SerializeField] private float debuffDuration;
     [SerializeField] protected bool isMeleeUnit;
+    [SerializeField] private float bravery; // Added bravery field
 
 
     // Resistances
