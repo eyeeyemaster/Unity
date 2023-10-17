@@ -20,7 +20,18 @@ public class AttackAction : AIAction
     }
     public override void Execute(AIContext context)
     {
-        // Attack logic from your existing code...
+        // Check if the target is not null
+        if (context.targetUnit != null)
+        {
+            // Calculate the direction towards the target
+            Vector3 direction = (context.targetUnit.transform.position - context.selfUnit.transform.position).normalized;
+
+            // Rotate the AI unit to face the target
+            context.selfUnit.transform.rotation = Quaternion.LookRotation(direction);
+
+            // Attack the target
+            context.selfUnit.Attack(context.targetUnit);
+        }
     }
 }
 
