@@ -17,6 +17,7 @@ public class RetreatingAction : AIAction
 
     public override void Execute(AIContext context)
     {
-        // Implement the logic for the AI unit to retreat
+        // Set the destination of the AI unit's NavMeshAgent to the spawn point
+        context.selfUnit.GetComponent<UnityEngine.AI.NavMeshAgent>().destination = context.spawnPoint;
     }
 }

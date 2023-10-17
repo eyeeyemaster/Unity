@@ -26,6 +26,7 @@ public class CreatureSpawner : MonoBehaviour
         {
             baseUnit.SetTeamConfiguration(teamConfig);
             creature.layer = teamConfig.layer;
+            baseUnit.context.spawnPoint = transform.position; // Set the spawn point in the AIContext
         }
         // Set the destination if applicable.
         if (agent != null && target != null)

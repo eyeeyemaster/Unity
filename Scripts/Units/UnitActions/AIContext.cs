@@ -12,6 +12,7 @@ public class AIContext
     public bool retreating; // Added retreating field
     public float range; // Added range field
     public float recentDamage; // Added recentDamage field
+    public Vector3 spawnPoint; // Added spawnPoint field
 
     public AIContext(BaseUnit unit)
     {
