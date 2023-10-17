@@ -9,6 +9,8 @@ public class AIContext
     public List<BaseUnit> activeEnemies = new List<BaseUnit>();
     public float detectionRadius;
     public LayerMask enemyLayers;
+    public bool retreating; // Added retreating field
+    public float range; // Added range field
 
     public AIContext(BaseUnit unit)
     {
